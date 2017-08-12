@@ -18,3 +18,12 @@ trains.each do |train|
   end
 end
 puts "Train 111 is heading #{train111_direction}"
+
+# Save the frequency of train 80B into a variable.
+train80B_frequency = ""
+trains.each do |train|
+  if train[:train] == "80B"
+    train80B_frequency = train[:frequency_in_minutes]
+  end
+end
+puts "The frequency of train 80B is #{train80B_frequency} minutes"
